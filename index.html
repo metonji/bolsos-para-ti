@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bolsos Para Ti</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fffaf8;
+  color: #292326;
+}
+
+header {
+  background: white;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  color: #e85d8a;
+  font-size: 27px;
+  font-weight: bold;
+}
+
+nav a {
+  text-decoration: none;
+  color: #292326;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #e85d8a;
+}
+
+/* PORTADA */
+
+.hero {
+  min-height: 600px;
+  padding: 70px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  background: linear-gradient(120deg, #fff0f5, #fffaf8);
+}
+
+.hero-text {
+  max-width: 550px;
+}
+
+.marca {
+  color: #e85d8a;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: 55px;
+  line-height: 1;
+  margin-bottom: 25px;
+}
+
+.hero p {
+  font-size: 19px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.boton {
+  display: inline-block;
+  background: #e85d8a;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.boton:hover {
+  background: #d94d7b;
+}
+
+/* IMAGEN DE LA PORTADA */
+
+.hero-imagen {
+  width: 50%;
+  max-width: 650px;
+}
+
+.hero-imagen img {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+/* CARACTERÍSTICAS */
+
+.caracteristicas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  background: white;
+  padding: 40px 8%;
+  text-align: center;
+}
+
+.caracteristica {
+  padding: 15px;
+}
+
+.icono {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.caracteristica h3 {
+  margin-bottom: 8px;
+}
+
+.caracteristica p {
+  color: #777;
+}
+
+/* CATÁLOGO */
+
+#catalogo {
+  padding: 80px 8%;
+}
+
+.titulo {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.titulo h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.titulo p {
+  color: #777;
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.producto {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.foto-producto {
+  height: 240px;
+  background: #f7e5ea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.foto-producto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.producto-info {
+  padding: 20px;
+}
+
+.producto-info h3 {
+  margin-bottom: 10px;
+}
+
+.precio {
+  color: #e85d8a;
+  font-size: 21px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.preguntar {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  border: 2px solid #e85d8a;
+  color: #e85d8a;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.preguntar:hover {
+  background: #e85d8a;
+  color: white;
+}
+
+/* COMO COMPRAR */
+
+#comprar {
+  padding: 80px 8%;
+  background: #fff0f5;
+}
+
+.pasos {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.paso {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.numero {
+  color: #e85d8a;
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* CONTACTO */
+
+#contacto {
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.contacto-box {
+  max-width: 800px;
+  margin: auto;
+  padding: 50px 30px;
+  background: linear-gradient(120deg, #fff0f5, #fffaf8);
+  border-radius: 25px;
+}
+
+.contacto-box h2 {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.contacto-box p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* FOOTER */
+
+footer {
+  background: #292326;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+footer span {
+  color: #e85d8a;
+}
+
+/* MÓVIL */
+
+@media (max-width: 900px) {
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-imagen {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .caracteristicas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pasos {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav a {
+    margin: 0 7px;
+    font-size: 13px;
+  }
+
+  .hero {
+    padding: 50px 5%;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .productos {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .foto-producto {
+    height: 170px;
+  }
+
+  .producto-info {
+    padding: 13px;
+  }
+
+  .producto-info h3 {
+    font-size: 15px;
+  }
+
+  .precio {
+    font-size: 17px;
+  }
+
+  .caracteristicas {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">
+    👜 Bolsos Para Ti
+  </div>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#catalogo">Catálogo</a>
+    <a href="#comprar">Cómo comprar</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+</header>
+
+<!-- PORTADA -->
+
+<section class="hero" id="inicio">
+
+  <div class="hero-text">
+
+    <div class="marca">
+      BOLSOS PARA TI
+    </div>
+
+    <h1>
+      Encuentra tu próximo bolso favorito.
+    </h1>
+
+    <p>
+      Bolsos bonitos, prácticos y a buen precio.
+      Descubre nuestros modelos disponibles.
+    </p>
+
+    <!-- CAMBIA EL NÚMERO -->
+
+    <a
+      class="boton"
+      href="https://wa.me/34000000000"
+      target="_blank">
+      💬 Pedir por WhatsApp
+    </a>
+
+  </div>
+
+  <!--
+  GUARDA LA IMAGEN DE DISEÑO QUE TE HICE
+  DENTRO DEL PROYECTO CON EL NOMBRE:
+
+  portada.png
+  -->
+
+  <div class="hero-imagen">
+
+    <img
+      src="portada.png"
+      alt="Bolsos Para Ti">
+
+  </div>
+
+</section>
+
+<!-- CARACTERÍSTICAS -->
+
+<section class="caracteristicas">
+
+  <div class="caracteristica">
+    <div class="icono">♡</div>
+    <h3>Para cada ocasión</h3>
+    <p>Encuentra el bolso que va contigo.</p>
+  </div>
+
+  <div class="caracteristica">
+    <div class="icono">🏷️</div>
+    <h3>Buenos precios</h3>
+    <p>Estilo sin gastar demasiado.</p>
+  </div>
+
+  <div class="caracteristica">
+    <div class="icono">📦</div>
+    <h3>Disponibilidad</h3>
+    <p>Modelos que pueden cambiar.</p>
+  </div>
+
+  <div class="caracteristica">
+    <div class="icono">💬</div>
+    <h3>WhatsApp</h3>
+    <p>Pregunta fácilmente.</p>
+  </div>
+
+</section>
+
+<!-- CATÁLOGO -->
+
+<section id="catalogo">
+
+  <div class="titulo">
+
+    <h2>Nuestros bolsos</h2>
+
+    <p>
+      Algunos de nuestros modelos disponibles
+    </p>
+
+  </div>
+
+  <div class="productos">
+
+    <div class="producto">
+
+      <div class="foto-producto">
+        <img src="bolso1.jpg" alt="Bolso Clásico">
+      </div>
+
+      <div class="producto-info">
+
+        <h3>Bolso Clásico</h3>
+
+        <div class="precio">
+          18,00 €
+        </div>
+
+        <a
+          class="preguntar"
+          href="https://wa.me/34000000000?text=Hola%2C%20me%20interesa%20el%20Bolso%20Cl%C3%A1sico"
+          target="_blank">
+          Preguntar
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="producto">
+
+      <div class="foto-producto">
+        <img src="bolso2.jpg" alt="Bolso Casual">
+      </div>
+
+      <div class="producto-info">
+
+        <h3>Bolso Casual</h3>
+
+        <div class="precio">
+          16,00 €
+        </div>
+
+        <a
+          class="preguntar"
+          href="https://wa.me/34000000000?text=Hola%2C%20me%20interesa%20el%20Bolso%20Casual"
+          target="_blank">
+          Preguntar
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="producto">
+
+      <div class="foto-producto">
+        <img src="bolso3.jpg" alt="Bolso Bandolera">
+      </div>
+
+      <div class="producto-info">
+
+        <h3>Bolso Bandolera</h3>
+
+        <div class="precio">
+          15,00 €
+        </div>
+
+        <a
+          class="preguntar"
+          href="https://wa.me/34000000000?text=Hola%2C%20me%20interesa%20el%20Bolso%20Bandolera"
+          target="_blank">
+          Preguntar
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="producto">
+
+      <div class="foto-producto">
+        <img src="bolso4.jpg" alt="Bolso Acolchado">
+      </div>
+
+      <div class="producto-info">
+
+        <h3>Bolso Acolchado</h3>
+
+        <div class="precio">
+          17,00 €
+        </div>
+
+        <a
+          class="preguntar"
+          href="https://wa.me/34000000000?text=Hola%2C%20me%20interesa%20el%20Bolso%20Acolchado"
+          target="_blank">
+          Preguntar
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- COMO COMPRAR -->
+
+<section id="comprar">
+
+  <div class="titulo">
+
+    <h2>¿Cómo comprar?</h2>
+
+    <p>
+      Comprar es muy sencillo
+    </p>
+
+  </div>
+
+  <div class="pasos">
+
+    <div class="paso">
+
+      <div class="numero">1</div>
+
+      <h3>Elige tu bolso</h3>
+
+      <p>
+        Mira nuestro catálogo y elige
+        el modelo que más te guste.
+      </p>
+
+    </div>
+
+    <div class="paso">
+
+      <div class="numero">2</div>
+
+      <h3>Escríbenos</h3>
+
+      <p>
+        Pulsa el botón de WhatsApp
+        para preguntarnos.
+      </p>
+
+    </div>
+
+    <div class="paso">
+
+      <div class="numero">3</div>
+
+      <h3>Confirma tu pedido</h3>
+
+      <p>
+        Confirmamos disponibilidad,
+        precio y entrega contigo.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACTO -->
+
+<section id="contacto">
+
+  <div class="contacto-box">
+
+    <h2>
+      ¿Has encontrado tu bolso?
+    </h2>
+
+    <p>
+      Escríbenos y te ayudaremos con tu pedido.
+    </p>
+
+    <a
+      class="boton"
+      href="https://wa.me/34000000000"
+      target="_blank">
+      💬 Escribir por WhatsApp
+    </a>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <p>
+    © 2026 <span>Bolsos Para Ti</span>
+  </p>
+
+  <p>
+    Todos los derechos reservados
+  </p>
+
+</footer>
+
+</body>
+</html>
