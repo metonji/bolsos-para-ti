@@ -1,6 +1,6 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,7 @@
   <title>Pink Bags | Tu bolso perfecto</title>
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -24,104 +25,160 @@
 
     .hero {
       min-height: 90vh;
+
       background:
-        radial-gradient(circle at 10% 20%, rgba(255,255,255,.7), transparent 30%),
-        radial-gradient(circle at 90% 80%, rgba(255,255,255,.5), transparent 30%),
-        linear-gradient(135deg, #f9d8e5, #f6c4d8, #fbe7ef);
+        radial-gradient(
+          circle at 10% 20%,
+          rgba(255,255,255,.7),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 90% 80%,
+          rgba(255,255,255,.5),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          #f9d8e5,
+          #f6c4d8,
+          #fbe7ef
+        );
 
       display: flex;
       align-items: center;
       justify-content: center;
+
       text-align: center;
+
       padding: 40px 20px;
+
       position: relative;
       overflow: hidden;
     }
 
     .hero::before {
       content: "";
+
       position: absolute;
+
       width: 300px;
       height: 300px;
+
       border-radius: 50%;
+
       background: rgba(255,255,255,.25);
+
       top: -120px;
       left: -100px;
     }
 
     .hero-content {
       max-width: 700px;
+
       position: relative;
       z-index: 1;
     }
 
     .logo {
       font-family: Georgia, serif;
+
       font-size: 18px;
+
       letter-spacing: 5px;
+
       text-transform: uppercase;
+
       color: #805168;
+
       margin-bottom: 25px;
     }
 
     .hero h1 {
       font-family: Georgia, serif;
+
       font-size: clamp(48px, 10vw, 85px);
+
       line-height: .95;
+
       color: #6f3b54;
+
       margin-bottom: 25px;
     }
 
     .hero h1 span {
       display: block;
+
       font-style: italic;
+
       color: #a95176;
     }
 
     .hero p {
       font-size: 18px;
+
       line-height: 1.6;
+
       max-width: 550px;
+
       margin: auto;
+
       color: #704e5c;
     }
 
     .hero-button {
       display: inline-block;
+
       margin-top: 32px;
+
       padding: 15px 35px;
+
       background: #7e4660;
+
       color: white;
+
       text-decoration: none;
+
       border-radius: 30px;
+
       font-weight: bold;
+
       box-shadow: 0 8px 20px rgba(100,50,75,.2);
+
       transition: .25s;
     }
 
     .hero-button:hover {
       transform: translateY(-3px);
+
       background: #68364f;
     }
+
 
     /* ---------- ENCABEZADO CATÁLOGO ---------- */
 
     .coleccion {
       text-align: center;
+
       padding: 75px 20px 30px;
     }
 
     .coleccion small {
       color: #b05b7e;
+
       text-transform: uppercase;
+
       letter-spacing: 3px;
+
       font-weight: bold;
     }
 
     .coleccion h2 {
       font-family: Georgia, serif;
+
       font-size: 40px;
+
       color: #633b4d;
+
       margin: 12px 0;
     }
 
@@ -129,117 +186,118 @@
       color: #80636e;
     }
 
+
     /* ---------- PRODUCTOS ---------- */
 
     .productos {
       max-width: 1150px;
+
       margin: 30px auto 80px;
+
       padding: 0 20px;
 
       display: grid;
+
       grid-template-columns: repeat(3, 1fr);
+
       gap: 25px;
     }
 
     .producto {
       background: white;
+
       border-radius: 22px;
+
       overflow: hidden;
+
       box-shadow: 0 10px 30px rgba(100,50,75,.09);
+
       border: 1px solid #f2dce5;
+
       transition: .25s;
     }
 
     .producto:hover {
       transform: translateY(-6px);
+
       box-shadow: 0 15px 35px rgba(100,50,75,.14);
     }
 
     .imagen {
       height: 330px;
+
       background: #f7e6ed;
+
       display: flex;
+
       align-items: center;
       justify-content: center;
-      color: #a66d83;
+
       position: relative;
+
       overflow: hidden;
     }
 
     .imagen img {
       width: 100%;
       height: 100%;
+
       object-fit: cover;
+
+      display: block;
     }
 
-    .nuevo {
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      background: white;
-      color: #9b4e70;
-      padding: 7px 12px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: bold;
-      box-shadow: 0 3px 10px rgba(0,0,0,.08);
-    }
 
-    .producto-info {
-      padding: 22px;
-    }
-
-    .producto-info h3 {
-      font-family: Georgia, serif;
-      color: #683c51;
-      font-size: 23px;
-      margin-bottom: 8px;
-    }
-
-    .descripcion {
-      color: #8b717b;
-      font-size: 14px;
-      line-height: 1.5;
-      margin-bottom: 15px;
-    }
-
-    .precio {
-      font-size: 21px;
-      font-weight: bold;
-      color: #a64f75;
-      margin-bottom: 17px;
-    }
+    /* ---------- BOTÓN WHATSAPP ---------- */
 
     .whatsapp {
       display: block;
+
       text-align: center;
+
       background: #d9789e;
+
       color: white;
+
       text-decoration: none;
+
       padding: 13px;
+
       border-radius: 12px;
+
       font-weight: bold;
+
       transition: .2s;
+
+      margin: 20px;
     }
 
     .whatsapp:hover {
       background: #bf5c84;
     }
 
+
     /* ---------- BANNER ---------- */
 
     .banner {
       margin: 0 20px 70px;
+
       padding: 45px 25px;
+
       border-radius: 25px;
+
       text-align: center;
+
       background: #f4d1df;
     }
 
     .banner h2 {
       font-family: Georgia, serif;
+
       color: #713d55;
+
       font-size: 30px;
+
       margin-bottom: 10px;
     }
 
@@ -247,30 +305,39 @@
       color: #765966;
     }
 
+
     /* ---------- PIE ---------- */
 
     footer {
       background: #6f3b54;
+
       color: #fbeaf1;
+
       text-align: center;
+
       padding: 35px 20px;
     }
 
     footer h3 {
       font-family: Georgia, serif;
+
       font-size: 25px;
+
       margin-bottom: 8px;
     }
 
     footer p {
       font-size: 14px;
+
       opacity: .9;
     }
+
 
     /* ---------- WHATSAPP FLOTANTE ---------- */
 
     .whatsapp-fijo {
       position: fixed;
+
       right: 18px;
       bottom: 18px;
 
@@ -278,14 +345,18 @@
       height: 58px;
 
       border-radius: 50%;
+
       background: #25d366;
+
       color: white;
 
       display: flex;
+
       align-items: center;
       justify-content: center;
 
       text-decoration: none;
+
       font-size: 27px;
 
       box-shadow: 0 5px 18px rgba(0,0,0,.2);
@@ -293,13 +364,17 @@
       z-index: 100;
     }
 
+
     /* ---------- MÓVIL ---------- */
 
     @media (max-width: 850px) {
+
       .productos {
         grid-template-columns: repeat(2, 1fr);
       }
+
     }
+
 
     @media (max-width: 600px) {
 
@@ -325,6 +400,7 @@
 
       .productos {
         grid-template-columns: 1fr;
+
         padding: 0 15px;
       }
 
@@ -336,11 +412,16 @@
         margin-left: 15px;
         margin-right: 15px;
       }
+
     }
+
   </style>
+
 </head>
 
+
 <body>
+
 
   <!-- PORTADA -->
 
@@ -371,6 +452,7 @@
   </section>
 
 
+
   <!-- TÍTULO DE LA COLECCIÓN -->
 
   <section class="coleccion" id="coleccion">
@@ -386,184 +468,137 @@
   </section>
 
 
+
   <!-- PRODUCTOS -->
 
   <section class="productos">
 
 
-    <!-- PRODUCTO 1 -->
+    <!-- FOTO 1 -->
 
     <article class="producto">
 
       <div class="imagen">
 
-        <div class="nuevo">
-          NUEVO
-        </div>
-
-        <!-- Aquí pondremos la foto real -->
-
-        <span>Foto del bolso</span>
+        <img
+          src="1000013258.jpg"
+          alt="Bolso"
+        >
 
       </div>
 
-      <div class="producto-info">
-
-        <h3>Bolso Rosa</h3>
-
-        <p class="descripcion">
-          Elegante y femenino, perfecto para el día a día.
-        </p>
-
-        <div class="precio">
-          29,99 €
-        </div>
-
-        <a
-          class="whatsapp"
-          href="https://wa.me/TUNUMERO?text=Hola,%20me%20interesa%20el%20Bolso%20Rosa"
-          target="_blank">
-
-          💬 Consultar por WhatsApp
-
-        </a>
-
-      </div>
+      <a
+        class="whatsapp"
+        href="https://wa.me/TUNUMERO"
+        target="_blank"
+      >
+        💬 Consultar por WhatsApp
+      </a>
 
     </article>
 
 
-    <!-- PRODUCTO 2 -->
+
+    <!-- FOTO 2 -->
 
     <article class="producto">
 
       <div class="imagen">
 
-        <div class="nuevo">
-          NUEVO
-        </div>
-
-        <span>Foto del bolso</span>
-
-      </div>
-
-      <div class="producto-info">
-
-        <h3>Bolso Beige</h3>
-
-        <p class="descripcion">
-          Un diseño sencillo y elegante para combinar con todo.
-        </p>
-
-        <div class="precio">
-          34,99 €
-        </div>
-
-        <a
-          class="whatsapp"
-          href="https://wa.me/TUNUMERO?text=Hola,%20me%20interesa%20el%20Bolso%20Beige"
-          target="_blank">
-
-          💬 Consultar por WhatsApp
-
-        </a>
+        <img
+          src="1000013261.jpg"
+          alt="Bolso"
+        >
 
       </div>
+
+      <a
+        class="whatsapp"
+        href="https://wa.me/TUNUMERO"
+        target="_blank"
+      >
+        💬 Consultar por WhatsApp
+      </a>
 
     </article>
 
 
-    <!-- PRODUCTO 3 -->
+
+    <!-- FOTO 3 -->
 
     <article class="producto">
 
       <div class="imagen">
 
-        <div class="nuevo">
-          NUEVO
-        </div>
-
-        <span>Foto del bolso</span>
-
-      </div>
-
-      <div class="producto-info">
-
-        <h3>Bolso Negro</h3>
-
-        <p class="descripcion">
-          Un clásico elegante para cualquier ocasión.
-        </p>
-
-        <div class="precio">
-          39,99 €
-        </div>
-
-        <a
-          class="whatsapp"
-          href="https://wa.me/TUNUMERO?text=Hola,%20me%20interesa%20el%20Bolso%20Negro"
-          target="_blank">
-
-          💬 Consultar por WhatsApp
-
-        </a>
+        <img
+          src="1000013256.jpg"
+          alt="Bolso"
+        >
 
       </div>
+
+      <a
+        class="whatsapp"
+        href="https://wa.me/TUNUMERO"
+        target="_blank"
+      >
+        💬 Consultar por WhatsApp
+      </a>
 
     </article>
 
-
-    <!-- PRODUCTO 4 -->
-
-    <article class="producto">
-
-      <div class="imagen">
-
-        <div class="nuevo">
-          NUEVO
-        </div>
-
-        <span>Foto del bolso</span>
-
-      </div>
-
-      <div class="producto-info">
-
-        <h3>Bolso Blanco</h3>
-
-        <p class="descripcion">
-          Un diseño delicado y luminoso para tus looks.
-        </p>
-
-        <div class="precio">
-          32,99 €
-        </div>
-
-        <a
-          class="whatsapp"
-          href="https://wa.me/TUNUMERO?text=Hola,%20me%20interesa%20el%20Bolso%20Blanco"
-          target="_blank">
-
-          💬 Consultar por WhatsApp
-
-        </a>
-
-      </div>
-
-    </article>
 
   </section>
+
 
 
   <!-- BANNER -->
 
   <section class="banner">
 
-    <h2>¿Has encontrado tu favorito? 💗</h2>
+    <h2>
+      ¿Has encontrado tu favorito? 💗
+    </h2>
 
     <p>
       Escríbenos por WhatsApp y te ayudaremos con tu pedido.
     </p>
+
+  </section>
+
+
+
+  <!-- PIE -->
+
+  <footer>
+
+    <h3>
+      Pink Bags
+    </h3>
+
+    <p>
+      Bolsos con estilo · Elegancia · Personalidad
+    </p>
+
+  </footer>
+
+
+
+  <!-- WHATSAPP -->
+
+  <a
+    class="whatsapp-fijo"
+    href="https://wa.me/TUNUMERO"
+    target="_blank"
+    aria-label="Contactar por WhatsApp"
+  >
+    💬
+  </a>
+
+
+</body>
+
+</html>p>
 
   </section>
 
